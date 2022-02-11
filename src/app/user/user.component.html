@@ -1,0 +1,17 @@
+<p>user works!</p>
+<ng-container *ngFor="let item of userDetails; let indexofEle=index;">
+    <div *ngIf="userDetails.length > 0">
+        <div class="title">
+            <p>
+                {{item.name}}
+            </p>
+            <p>
+                {{item.password}}
+            </p>
+        </div>
+    </div>
+</ng-container>
+
+<div *ngIf="userDetails.length == 0">
+    <p> No Data Found</p>
+</div>

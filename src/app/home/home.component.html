@@ -1,0 +1,26 @@
+<div>
+    <label for="fname">userName:</label>
+    <input type="text" id="fname" [(ngModel)]="username" name="fname"><br><br>
+
+    <label for="pwd">Password:</label>
+    <input type="text" [(ngModel)]="pwd" id="pwd" name="pwd">
+
+    <input type="text" [(ngModel)]="pwd" >
+</div> <br>
+
+<button type="button" (click)="login()">Log in</button>
+
+<br>
+
+<a routerLink="/Home/xyz">
+    user
+</a>
+<router-outlet></router-outlet>
+
+<div *ngIf="condition">{{warning}} Access granted...
+    <a routerLink="/user">
+        user
+    </a>
+</div><br>
+<div *ngIf="!condition">username and password does not matched...</div>
+
